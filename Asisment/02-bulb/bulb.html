@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bulb Toggle</title>
+  </head>
+  <body>
+    <img id="bulb" src="offbulb.png" width="100px" />
+    <br />
+    <button onclick="onOffBulb()">on/off Bulb button</button>
+
+    <script>
+      var bulbImages = ["offbulb.png", "onbulb.png"];
+
+      function onOffBulb() {
+        var bulb = document.getElementById("bulb");
+
+        if (bulb.src.endsWith(bulbImages[0])) {
+          bulb.src = bulbImages[1]; // Turn ON
+        } else {
+          bulb.src = bulbImages[0]; // Turn OFF
+        }
+      }
+    </script>
+  </body>
+</html>
